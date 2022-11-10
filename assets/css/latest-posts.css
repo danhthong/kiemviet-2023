@@ -1,0 +1,86 @@
+
+.latest-posts {
+	display: grid;
+	list-style-type: none;
+	grid-template-columns: repeat(1, minmax(0, 1fr));
+	grid-gap: 1.5rem;
+	gap: 1.5rem
+}
+
+@media (min-width:900px) {
+	.latest-posts {
+		grid-template-columns: repeat(2, minmax(0, 1fr))
+	}
+}
+
+@media (min-width:1200px) {
+	.latest-posts {
+		grid-template-columns: repeat(3, minmax(0, 1fr))
+	}
+}
+
+.latest-posts .post-item {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	padding-bottom: 1.5rem;
+	--tw-shadow: 0 0 1px 0 rgba(139, 120, 254, 0.05), 0 4px 8px 0 rgba(139, 120, 254, 0.1);
+	box-shadow: 0 0 transparent, 0 0 transparent, var(--tw-shadow);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent), var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow)
+}
+
+.latest-posts .post-item .post-image {
+	height: 245px;
+	margin-bottom: .5rem;
+	overflow: hidden
+}
+
+.latest-posts .post-item .post-image a {
+	height: 100%;
+	width: 100%
+}
+
+.latest-posts .post-item .post-image img {
+	height: 100%;
+	width: 100%;
+	--tw-scale-x: 1;
+	--tw-scale-y: 1;
+	-o-object-fit: cover;
+	object-fit: cover;
+	transition-property: all;
+	transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+	transition-duration: .15s;
+	transition-duration: .2s;
+	transition-timing-function: cubic-bezier(.4, 0, 1, 1);
+	will-change: transform
+}
+
+.latest-posts .post-item .post-image img:hover {
+	--tw-translate-x: 0;
+	--tw-translate-y: 0;
+	--tw-rotate: 0;
+	--tw-skew-x: 0;
+	--tw-skew-y: 0;
+	--tw-scale-x: 1;
+	--tw-scale-y: 1;
+	transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+	--tw-scale-x: 1.05;
+	--tw-scale-y: 1.05
+}
+
+.latest-posts .post-item .post-title {
+	margin-bottom: .5rem;
+	font-size: 1.5rem;
+	font-weight: 600;
+	min-height: 64px
+}
+
+.latest-posts .post-item .post-excerpt,
+.latest-posts .post-item .post-title {
+	padding-left: 1rem;
+	padding-right: 1rem
+}
+
+.wp-block-latest-posts__featured-image img {
+	margin-bottom: .5rem
+}
